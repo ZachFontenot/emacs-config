@@ -1,0 +1,12 @@
+elpa/*
+eln-cache/*
+auto-save-list/*
+savefile/*
+eshell/*
+history
+transient/*
+.lsp-session*
+.DS_Store
+projectile-bookmarks.eld
+projects
+org-roam.db

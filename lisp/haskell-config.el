@@ -1,9 +1,9 @@
-;;; haskell-conf.el --- Setup for Haskell programming language -*- lexical-binding: t -*-
+;;; haskell-config.el --- Setup for Haskell programming language -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
 (use-package haskell-mode
-  :ensure t
+  ;;:ensure t
   :hook
   (haskell-mode . interactive-haskell-mode))
 
@@ -14,5 +14,5 @@
   (:map haskell-mode-map
         ("C-c r" . ormolu-format-buffer)))
 
-(provide 'haskell-conf)
-;;; haskell-conf.el ends here
+(provide 'haskell-config)
+;;; haskell-config.el ends here

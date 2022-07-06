@@ -56,8 +56,13 @@
 ;;   (load-theme 'faff))
 
 ;; (use-package hasklig-mode
-;;   :ensure t
+;;   :ensure t;
 ;;   :hook (haskell-mode elixir-mode))
+
+;; dvorak helpin
+(global-set-key (kbd "C-z") ctl-x-map)
+(global-set-key (kbd "C-x C-h") help-map)
+(global-set-key (kbd "C-h") 'previous-line)
 
 (set-face-attribute 'default nil
                     :family "mononoki Nerd Font Mono"

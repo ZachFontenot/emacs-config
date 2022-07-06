@@ -12,6 +12,8 @@
   (lsp-idle-delay 0.6)
   :hook (typescript-mode . lsp) (lsp-mode . lsp-lens-mode))
 
+(advice-add 'lsp :before #'direnv-update-environment)
+
 (use-package lsp-ui
   :ensure t
   :commands lsp-ui-mode

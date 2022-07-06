@@ -31,6 +31,8 @@
 
 (require 'consult-config)
 
+(require 'docker-config)
+
 (require 'elixir-config)
 
 (require 'racket-config)
@@ -45,8 +47,8 @@
 (require 'lsp-config)
 
 (require 'typescript-config)
-;; (require 'haskell-conf)
 
+(require 'haskell-config)
 
 (load-file (let ((coding-system-for-read 'utf-8))
              (shell-command-to-string "agda-mode locate")))

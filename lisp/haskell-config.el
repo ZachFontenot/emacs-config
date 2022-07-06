@@ -7,6 +7,10 @@
   :hook
   (haskell-mode . interactive-haskell-mode))
 
+(use-package lsp-haskell
+  :defer t
+  :ensure t)
+
 (use-package ormolu
   :ensure t
   :hook (haskell-mode . ormolu-format-on-save-mode)

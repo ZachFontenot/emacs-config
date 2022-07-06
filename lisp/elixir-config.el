@@ -1,11 +1,12 @@
-;;; elixir-conf.el --- Elixir Language Config -*- lexical-binding: t -*-
+;;; elixir-config.el --- Elixir Language Config -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
 (use-package elixir-mode
-  :ensure t)
+  :ensure t
+  :hook (elixir-mode . lsp) (elixir-mode . yas-minor-mode))
 
-(add-to-list 'exec-path "~/elixir-ls-1.11.4/")
+;; (add-to-list 'exec-path "~/elixir-ls-1.11.4/")
 
 (use-package web-mode
   :ensure t
@@ -18,5 +19,5 @@
         web-mode-code-indent-offset 2
         web-mode-enable-auto-pairing nil))
 
-(provide 'elixir-conf)
-;;; elixir-conf.el ends here
+(provide 'elixir-config)
+;;; elixir-config.el ends here

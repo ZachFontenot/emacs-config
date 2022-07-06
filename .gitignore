@@ -10,3 +10,4 @@ transient/*
 projectile-bookmarks.eld
 projects
 org-roam.db
+.cache/*

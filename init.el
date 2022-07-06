@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;; Doing things and setting up package system, bootstrapping use-package and loading other configurations
 ;;; Code:
-;; (server-start) -> while working on it.
+(server-start) ;; -> while working on it.
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -25,20 +25,45 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; General things
-(require 'setup)
+(require 'setup-config)
 
-(require 'vertico-conf)
+(require 'general-config)
 
-(require 'consult-conf)
+(require 'consult-config)
 
-(require 'org-roam-conf)
+(require 'docker-config)
 
-;; Language things
-(require 'lsp-conf)
+(require 'elixir-config)
 
-(require 'haskell-conf)
+(require 'racket-config)
 
-(require 'elixir-conf)
+(require 'go-config)
+
+(require 'org-roam-config)
+
+(require 'ocaml-config)
+
+;; ;; Language things
+(require 'lsp-config)
+
+(require 'typescript-config)
+
+(require 'haskell-config)
+
+(load-file (let ((coding-system-for-read 'utf-8))
+             (shell-command-to-string "agda-mode locate")))
+
+;; (setq auto-mode-alist
+;;       (append
+;;        '(("\\.lagda.md\\'" . agda2-mode))))
+
+(require 'idris-config)
+;; (use-package idris-mode
+;;   :config
+;;   (setq idris-interpreter-path "idris2"))
+
+(use-package sml-mode
+  :ensure t)
 
 (provide 'init)
 ;;; init.el ends here
